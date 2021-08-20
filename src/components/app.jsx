@@ -6,8 +6,7 @@ import {Link} from 'react-router-dom';
 const App = (props) => {
     return (
         <div className="container-fluid">
-            <nav className="navbar">
-                <div className="brand-name">Brand Name</div>
+            <nav className="navbar d-flex justify-content-center">
                 <div className="navbar-links">
                     <ul>
                         <li><Link to="bio">Bio</Link></li>
