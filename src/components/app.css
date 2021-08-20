@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Permanent+Marker&family=Urbanist:wght@100&display=swap');
+
 .container-fluid {
     padding: 0px !important;
     height: 100vh;
@@ -5,9 +7,8 @@
 }
 
 .navbar {
-    position: fixed;
-    z-index: 1;
-    height: 2.4rem;
+    height: 100% !important;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,7 @@
     display: flex;
     justify-content: center;
     animation-name: extend-nav;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -48,13 +49,34 @@
 
 .navbar-links a {
     text-decoration: none;
-    font-family: arial, sans-serif;
-    color: black;
-    font-size: 1.1rem;
+    font-family: "Urbanist", arial, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
     transition: letter-spacing 200ms;
 }
 
 .navbar-links a:hover {
     letter-spacing: 1.5px;
-    color: rgb(158, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+#profile-image {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    background-image:url("/src/assets/cnesmith_photo.jpg");
+    background-size: cover;
+}
+
+#profile-image-container {
+    position: absolute;
+}
+
+.full-name {
+    display: flex;
+    justify-content: center;
+    font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+    font-size: 180%;
+    color: black;
 }
