@@ -67,6 +67,7 @@
     border-radius: 50%;
     background-image:url("/src/assets/cnesmith_photo.jpg");
     background-size: cover;
+    box-shadow: 2px 2px 6px rgb(63, 63, 63);
 }
 
 #profile-image-container {
@@ -80,3 +81,11 @@
     font-size: 180%;
     color: black;
 }
+
+#background-animation {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
