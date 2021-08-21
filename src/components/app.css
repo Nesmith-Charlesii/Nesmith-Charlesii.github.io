@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom, rgb(95, 0, 163), rgb(20, 50, 150));
 }
 
 .navbar-links {
@@ -51,14 +52,14 @@
     text-decoration: none;
     font-family: "Urbanist", arial, sans-serif;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 1.1em;
     transition: letter-spacing 200ms;
 }
 
 .navbar-links a:hover {
     letter-spacing: 1.5px;
-    color: rgb(0, 0, 0);
+    color: rgb(202, 0, 27);
 }
 
 #profile-image {
@@ -67,7 +68,7 @@
     border-radius: 50%;
     background-image:url("/src/assets/cnesmith_photo.jpg");
     background-size: cover;
-    box-shadow: 2px 2px 6px rgb(63, 63, 63);
+    box-shadow: 2px 2px 6px rgb(32, 32, 32);
 }
 
 #profile-image-container {
@@ -79,13 +80,11 @@
     justify-content: center;
     font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
     font-size: 180%;
-    color: black;
+    color: rgb(19, 160, 0);
 }
 
-#background-animation {
-    position: absolute;
-    border: 1px solid black;
+.background-animation {
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 50%;
 }
-
 

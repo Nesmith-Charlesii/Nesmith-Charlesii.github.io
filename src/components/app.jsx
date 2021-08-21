@@ -1,34 +1,59 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, Switch, Route} from 'react-router-dom';
 
 const App = (props) => {
 
-    const backgroundAnimation = () => {
-        let backgroundAnimation = document.getElementById("background-animation");
-        let navBar = document.getElementById("navBar");
-        backgroundAnimation.style.height = `40px`;
-        backgroundAnimation.style.width = `40px`;
-        let cloneAnimation;
-        for(let i = 1; i <= 3; i++) {
-            cloneAnimation = backgroundAnimation.cloneNode(true);
-            navBar.insertBefore(cloneAnimation, navBar.childNodes[0]);
-            backgroundAnimation.style.position = "absolute";
-            backgroundAnimation.style.top = `${Math.floor(Math.random() * 500)}px`;
-            backgroundAnimation.style.right = `${Math.floor(Math.random() * 300)}px`
-            backgroundAnimation.style.bottom = `${Math.floor(Math.random() * 500)}px`
+    useEffect(() => {
+        navAnimationDiv()
+        playNavAnimation()
+    }, [])
+
+    const navAnimationDiv = () => {
+        let navAnimationDiv;
+        for(let i = 1; i <= 5; i++) {
+            navAnimationDiv = document.createElement('div');
+            let navBar = document.getElementById("navBar");
+            navAnimationDiv.classList.add("background-animation");
+            navAnimationDiv.setAttribute("id", "nav-animation");
+            navBar.insertBefore(navAnimationDiv, navBar.childNodes[0]);
+            navAnimationDiv.style.position = "absolute";
+            navAnimationDiv.style.top = `${Math.floor(Math.random() * 80)}%`;
+            navAnimationDiv.style.right = `${Math.floor(Math.random() * 100)}%`;
         }
-        console.log("clicked")
     };
+
+    const playNavAnimation = () => {
+            let circles = document.querySelectorAll(".background-animation");
+            let keyFrames = document.createElement("style");
+            for(let i = 0; i < circles.length; i++) {
+                let circle = circles[i];
+                keyFrames.innerHTML = `
+                @keyframes circle {
+                    0% {
+                        right: 150%;
+                    }
+                    100% {
+                        right: -50%;
+                    }
+                }
+                
+                .background-animation {
+                    animation: circle 40s infinite;
+                }`
+
+                circle.appendChild(keyFrames);
+            }
+            
+        }
 
     return (
         <div className="container-fluid">
             <nav className="navbar d-flex justify-content-center" id="navBar">
-                <div id="background-animation"></div>
                 <div className="navbar-links">
                     <ul>
-                        <li><Link to="bio" onClick={() => backgroundAnimation()}>Bio</Link></li>
+                        <li><Link to="bio">Bio</Link></li>
                         <li><Link to="tech">Tech/Stacks</Link></li>
                         <li></li>
                         <li id="profile-image-container">
