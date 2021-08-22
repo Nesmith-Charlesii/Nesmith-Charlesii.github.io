@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, rgb(95, 0, 163), rgb(20, 50, 150));
+    overflow: hidden;
 }
 
 .navbar-links {
@@ -52,14 +53,14 @@
     text-decoration: none;
     font-family: "Urbanist", arial, sans-serif;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: rgb(126, 255, 51);
     font-size: 1.1em;
     transition: letter-spacing 200ms;
 }
 
 .navbar-links a:hover {
     letter-spacing: 1.5px;
-    color: rgb(202, 0, 27);
+    color: rgb(251, 7, 39);
 }
 
 #profile-image {
@@ -80,11 +81,12 @@
     justify-content: center;
     font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
     font-size: 180%;
-    color: rgb(19, 160, 0);
+    color: rgb(230, 230, 230);
 }
 
 .background-animation {
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 50%;
+    height: 2px;
+    width: 2px;
 }
 

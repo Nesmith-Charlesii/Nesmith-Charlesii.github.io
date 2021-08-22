@@ -12,14 +12,14 @@ const App = (props) => {
 
     const navAnimationDiv = () => {
         let navAnimationDiv;
-        for(let i = 1; i <= 5; i++) {
+        for(let i = 1; i <= 40; i++) {
             navAnimationDiv = document.createElement('div');
             let navBar = document.getElementById("navBar");
             navAnimationDiv.classList.add("background-animation");
             navAnimationDiv.setAttribute("id", "nav-animation");
             navBar.insertBefore(navAnimationDiv, navBar.childNodes[0]);
             navAnimationDiv.style.position = "absolute";
-            navAnimationDiv.style.top = `${Math.floor(Math.random() * 80)}%`;
+            navAnimationDiv.style.top = `${Math.floor(Math.random() * 95)}%`;
             navAnimationDiv.style.right = `${Math.floor(Math.random() * 100)}%`;
         }
     };
@@ -31,16 +31,13 @@ const App = (props) => {
                 let circle = circles[i];
                 keyFrames.innerHTML = `
                 @keyframes circle {
-                    0% {
-                        right: 150%;
-                    }
-                    100% {
-                        right: -50%;
+                    50% {
+                        top: -20%;
                     }
                 }
                 
                 .background-animation {
-                    animation: circle 40s infinite;
+                    animation: circle 35s infinite forwards;
                 }`
 
                 circle.appendChild(keyFrames);
