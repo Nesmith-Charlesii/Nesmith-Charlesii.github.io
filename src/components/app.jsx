@@ -11,7 +11,7 @@ const App = (props) => {
 
     const navAnimationDiv = () => {
         let navAnimationDiv;
-        for(let i = 0; i < 100; i++) {
+        for(let i = 0; i < 120; i++) {
             // Create element and add to class list
             navAnimationDiv = document.createElement('div');
             let navBar = document.getElementById("navBar");
@@ -22,10 +22,10 @@ const App = (props) => {
             // Style element
             let y = Math.floor(Math.random() * window.innerWidth);
             let x = Math.floor(Math.random() * window.innerWidth);
-            let height = Math.floor(Math.random() * (4 - 2 + 1) + 2);
+            let height = Math.floor(Math.random() * (6 - 4 + 1) + 4);
             let width = height
             navAnimationDiv.style.top = y + "px";
-            navAnimationDiv.style.right =x + "px";
+            navAnimationDiv.style.right = x + "px";
             navAnimationDiv.style.height = height + "px";
             navAnimationDiv.style.width = width;
 
@@ -47,21 +47,21 @@ const App = (props) => {
                     }
                     25% {
                         transform: translateY(25vh) ;
-                        opacity: .3;
-                        height: ${height + 4}px;
-                        width: ${width + 4}px;
+                        opacity: .4;
+                        height: ${height + 2}px;
+                        width: ${width + 2}px;
                     }
                     50% {
                         transform: translateY(50vh) ;
-                        opacity: .8;
+                        opacity: 0;
                         height: ${navAnimationDiv.style.height};
                         width: ${navAnimationDiv.style.width};
                     }
                     75% {
                         transform: translateY(75vh) ;
-                        opacity: .2;
-                        height: ${height + 6}px;
-                        width: ${width + 6}px;
+                        opacity: .6;
+                        height: ${height + 2}px;
+                        width: ${width + 2}px;
                     }
                     100% {
                         transform: translateY(110vh) ;
@@ -85,15 +85,13 @@ const App = (props) => {
                 </div>
                 <div className="navbar-links">
                     <ul>
-                        <li><Link to="bio">Bio</Link></li>
-                        <li><Link to="tech">Tech/Stacks</Link></li>
+                        <li><Link to="bio" id="bio">Bio</Link></li>
+                        <li><Link to="tech" id="tech-stacks">Tech/Stacks</Link></li>
                         <li></li>
                         <li id="profile-image-container">
-                            <p className="full-name">Charles Nesmith II</p>
                             <hr/>
                                 <div id="profile-image"></div>
                             <hr/>
-                            <p className="full-name">Software Developer</p>
                         </li>
                         <li><Link to="projects">Projects</Link></li>
                         <li><Link to="contact">Contact</Link></li>
@@ -105,7 +103,7 @@ const App = (props) => {
                 </Route>
             </Switch>
             <footer>
-                <p>Powered By: React </p>
+                <p>Powered By: <b>CNII</b></p>
             </footer>
         </div>
     )

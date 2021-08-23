@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Permanent+Marker&family=Urbanist:wght@100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
 .container-fluid {
     padding: 0px !important;
     height: 100vh;
@@ -7,13 +9,13 @@
 }
 
 .navbar {
+    position: absolute;
     height: 92% !important;
-    /* height: 5rem; */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: linear-gradient(to top, rgb(194, 197, 248), rgb(255, 255, 255));
+    background-image: linear-gradient(to bottom right,rgb(173, 173, 173), rgb(255, 255, 255));
 }
 
 .navbar-links {
@@ -47,7 +49,7 @@
 .navbar-links ul li {
     list-style: none;  
     transform: translateY(0px);
-    transition: transform 200ms;
+    transition: transform 100ms;
 }
 
 .navbar-links ul li:hover {
@@ -55,24 +57,33 @@
 }
 
 .navbar-links a {
-    border: 1px outset rgba(255,255,255, .3 );
+    background-color: rgb(50, 26, 158);
     padding: 10px;
     border-bottom-right-radius: 7px;
     border-top-left-radius: 7px;
-    box-shadow: 2px 2px 5px rgb(15, 15, 15);
+    box-shadow: 2px 4px 5px rgb(97, 97, 97);
     text-decoration: none;
     font-family: "Urbanist", arial, sans-serif;
     font-weight: bold;
-    color: rgb(2, 2, 2);
+    color: rgb(223, 223, 223);
     font-size: 1.1em;
-    transition: letter-spacing 200ms;
-    text-shadow: 2px 2px 4px rgb(103, 112, 133);
+    text-shadow: 2px 2px 5px rgb(61, 61, 61);
     letter-spacing: 1.1px;
     transition: text-shadow 200ms;
 }
 
+#bio, #tech-stacks {
+    color: rgb(223, 223, 223);
+    text-shadow: 2px 2px 5px rgb(61, 61, 61);
+}
+
+#bio:hover, #tech-stacks:hover {
+    color: rgb(27, 255, 141);
+    text-shadow: none;
+}
+
 .navbar-links a:hover {
-    color: rgb(3, 155, 79);
+    color: rgb(27, 255, 141);
     text-shadow: none;
 }
 
@@ -82,14 +93,22 @@
     border-radius: 50%;
     background-image:url("/src/assets/cnesmith_photo.jpg");
     background-size: cover;
-    box-shadow: 2px 6px 10px rgb(173, 187, 250);
+    box-shadow: 2px 4px 10px rgb(37, 37, 37);
+    transition: border 4s;
+    animation: load-border 5s 1 linear;
 }
 
 #profile-image-container {
     position: absolute;
+    transform: translateY(0px);
+    transition: transform 200ms;
 }
 
-.full-name {
+#profile-image-container:hover {
+    transform: translateY(0px);
+}
+
+/* .full-name {
     display: flex;
     justify-content: center;
     font-family: "Urbanist", Arial, Helvetica, sans-serif;
@@ -97,7 +116,7 @@
     font-weight: bold;
     color: rgb(41, 41, 41);
     text-shadow: 2px 2px 6px rgb(90, 90, 90);
-}
+} */
 
 .background-animation {
     position: absolute;
@@ -116,19 +135,42 @@ hr {
     height: 100%;
     width: 100%;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.first-name-background {
+    font-size: 13rem;
+    font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -10px;
+    color: rgb(197, 197, 197);
+    text-shadow: 2px 7px 3px rgb(61, 61, 61);
+    padding-left: 3%;
+    transform:translate3d(0, 200deg);
+}
+
+.last-name-background {
+    font-size: 12rem;
+    display:flex;
+    justify-content: flex-end;
+    font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
+    text-shadow: 1px 7px 5px rgb(88, 88, 88);
+    padding-right: 3%;
+}
 
 
 footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 10%;
     width: 100%;
     position: fixed;
     z-index: 1;
     background-color: black;
     color: rgb(216, 216, 216);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Urbanist", Arial, Helvetica, sans-serif;
     padding-left: 12px;
 }
