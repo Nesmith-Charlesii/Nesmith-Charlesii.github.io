@@ -11,7 +11,7 @@ const App = (props) => {
 
     const navAnimationDiv = () => {
         let navAnimationDiv;
-        for(let i = 0; i < 120; i++) {
+        for(let i = 0; i < 80; i++) {
             // Create element and add to class list
             navAnimationDiv = document.createElement('div');
             let navBar = document.getElementById("navBar");

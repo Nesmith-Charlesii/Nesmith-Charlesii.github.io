@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Permanent+Marker&family=Urbanist:wght@100&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 .container-fluid {
     padding: 0px !important;
@@ -15,7 +16,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: linear-gradient(to bottom right,rgb(173, 173, 173), rgb(255, 255, 255));
+    background-image: linear-gradient(to bottom,rgb(192, 192, 192), rgb(255,255,255  ));
 }
 
 .navbar-links {
@@ -57,10 +58,10 @@
 }
 
 .navbar-links a {
-    background-color: rgb(50, 26, 158);
+    background-color: rgb(6, 0, 34);
     padding: 10px;
     border-bottom-right-radius: 7px;
-    border-top-left-radius: 7px;
+    border-top-left-radius: 7px; 
     box-shadow: 2px 4px 5px rgb(97, 97, 97);
     text-decoration: none;
     font-family: "Urbanist", arial, sans-serif;
@@ -108,16 +109,6 @@
     transform: translateY(0px);
 }
 
-/* .full-name {
-    display: flex;
-    justify-content: center;
-    font-family: "Urbanist", Arial, Helvetica, sans-serif;
-    font-size: 180%;
-    font-weight: bold;
-    color: rgb(41, 41, 41);
-    text-shadow: 2px 2px 6px rgb(90, 90, 90);
-} */
-
 .background-animation {
     position: absolute;
     box-shadow: 2px 4px 4px rgb(73, 73, 73);
@@ -137,27 +128,28 @@ hr {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .first-name-background {
-    font-size: 13rem;
-    font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
-    position: relative;
-    top: -10px;
-    color: rgb(197, 197, 197);
-    text-shadow: 2px 7px 3px rgb(61, 61, 61);
+    font-size: 10rem;
+    font-family: "Italiana", Arial, Helvetica, sans-serif;
+    color: rgb(31, 30, 32);
+    text-shadow: 6px 6px 3px rgb(68, 68, 68);
     padding-left: 3%;
     transform:translate3d(0, 200deg);
+    
 }
 
 .last-name-background {
-    font-size: 12rem;
+    font-size: 9rem;
     display:flex;
     justify-content: flex-end;
-    font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
-    text-shadow: 1px 7px 5px rgb(88, 88, 88);
+    font-family: "Italiana", Arial, Helvetica, sans-serif;
+    color: rgb(31, 30, 32);
+    text-shadow: 6px 6px 3px rgb(68, 68, 68);
     padding-right: 3%;
+    background-image: linear-gradient();
 }
 
 
