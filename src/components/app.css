@@ -58,24 +58,26 @@
 }
 
 .navbar-links a {
-    background-color: rgb(6, 0, 34);
+    background-image: linear-gradient(to bottom right, rgb(23, 0, 87), rgb(66, 0, 22));
     padding: 10px;
-    border-bottom-right-radius: 7px;
-    border-top-left-radius: 7px; 
-    box-shadow: 2px 4px 5px rgb(97, 97, 97);
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px; 
+    box-shadow: 4px 2px 3px rgb(61, 61, 61);
     text-decoration: none;
     font-family: "Urbanist", arial, sans-serif;
     font-weight: bold;
     color: rgb(223, 223, 223);
     font-size: 1.1em;
     text-shadow: 2px 2px 5px rgb(61, 61, 61);
-    letter-spacing: 1.1px;
+    letter-spacing: 1px;
     transition: text-shadow 200ms;
 }
 
 #bio, #tech-stacks {
     color: rgb(223, 223, 223);
     text-shadow: 2px 2px 5px rgb(61, 61, 61);
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px; 
 }
 
 #bio:hover, #tech-stacks:hover {
@@ -95,7 +97,6 @@
     background-image:url("/src/assets/cnesmith_photo.jpg");
     background-size: cover;
     box-shadow: 2px 4px 10px rgb(37, 37, 37);
-    transition: border 4s;
     animation: load-border 5s 1 linear;
 }
 
@@ -112,6 +113,7 @@
 .background-animation {
     position: absolute;
     box-shadow: 2px 4px 4px rgb(73, 73, 73);
+    border-radius: 50%;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -132,6 +134,8 @@ hr {
 }
 
 .first-name-background {
+    display: flex;
+    justify-content: space-between;
     font-size: 10rem;
     font-family: "Italiana", Arial, Helvetica, sans-serif;
     color: rgb(31, 30, 32);
@@ -144,12 +148,26 @@ hr {
 .last-name-background {
     font-size: 9rem;
     display:flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     font-family: "Italiana", Arial, Helvetica, sans-serif;
     color: rgb(31, 30, 32);
     text-shadow: 6px 6px 3px rgb(68, 68, 68);
     padding-right: 3%;
     background-image: linear-gradient();
+}
+
+#developer {
+    font-size: 9rem;
+    color: rgb(206, 206, 206);
+    text-shadow: 12px 6px 3px rgb(58, 58, 58);
+    padding-right: 3%;
+}
+
+#software {
+    font-size: 9rem;
+    color: rgb(231, 229, 229);
+    text-shadow: 12px 3px 3px rgb(44, 44, 44);
+    padding-left: 3%;
 }
 
 

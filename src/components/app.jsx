@@ -7,11 +7,12 @@ const App = (props) => {
 
     useEffect(() => {
         navAnimationDiv()
+        backgroundText()
     }, [])
 
     const navAnimationDiv = () => {
         let navAnimationDiv;
-        for(let i = 0; i < 80; i++) {
+        for(let i = 0; i < 20; i++) {
             // Create element and add to class list
             navAnimationDiv = document.createElement('div');
             let navBar = document.getElementById("navBar");
@@ -73,15 +74,27 @@ const App = (props) => {
             `
             navAnimationDiv.appendChild(keyFrames);
         }
-        console.log(navAnimationDiv.className);
     };
+
+    const backgroundText = () => {
+        let firstWordSkill = document.getElementById("software");
+        let secondWordSkill = document.getElementById("developer");
+        // firstWordSkill.innerText = "";
+        console.log(firstWordSkill.innerText);
+    }
 
     return (
         <div className="container-fluid">
             <nav className="navbar d-flex justify-content-center" id="navBar">
                 <div className="name-background-banner">
-                    <div className="first-name-background">Charles</div>
-                    <div className="last-name-background">Nesmith II</div>
+                    <div className="first-name-background">
+                        <p>Charles</p>
+                        <p id="developer">Developer</p>
+                    </div>
+                    <div className="last-name-background">
+                        <p id="software">Software</p>
+                        <p>Nesmith II</p>
+                    </div>
                 </div>
                 <div className="navbar-links">
                     <ul>
