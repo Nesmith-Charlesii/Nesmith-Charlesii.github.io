@@ -78,12 +78,15 @@ const App = (props) => {
 
     let i = 0; 
     const backgroundText = () => {
-        let bottomLeftWord = document.getElementById('software');
+        let topRightWord = document.getElementById('top-right-word');
+        let bottomLeftWord = document.getElementById('bottom-left-word');
         let skillWordsBottom = ["Software", "Full", "Web"];
+        let skillWordsTop = ["Developer", "Stack", "Design"]
         if(i < skillWordsBottom.length) {
             bottomLeftWord.innerText = skillWordsBottom[i];
+            topRightWord.innerText = skillWordsTop[i];  
             i++;
-            setTimeout(backgroundText, 2000);
+            setTimeout(backgroundText, 10000);
         } else {
             i = 0;
             backgroundText();
@@ -93,14 +96,17 @@ const App = (props) => {
     return (
         <div className="container-fluid">
             <nav className="navbar d-flex justify-content-center" id="navBar">
+                <div className="background-shape">
+                    
+                </div>
                 <div className="name-background-banner">
                     <div className="first-name-background">
-                        <p>Charles</p>
-                        <p id="developer">DEVELOPER</p>
+                        <p></p>
+                        <p id="top-right-word"></p>
                     </div>
                     <div className="last-name-background">
-                        <p id="software"></p>
-                        <p>Nesmith II</p>
+                        <p id="bottom-left-word"></p>
+                        <p></p>
                     </div>
                 </div>
                 <div className="navbar-links">
