@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Permanent+Marker&family=Urbanist:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+.container-fluid {
+    padding: 0px !important;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: absolute;
+    height: 92% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom,rgb(192, 191, 191), rgb(220, 220, 220));
+}
+
+.navbar-links {
+    height: 100%;
+    width: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: extend-nav;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes extend-nav {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 100%;
+    }
+}
+
+.navbar-links ul {
+    height: 55px;
+    border-top: 1px solid rgb(211, 211, 211);
+    border-bottom: 1px solid rgb(211, 211, 211);
+    background-image: linear-gradient(to right, rgb(218, 218, 218) 50%, rgb(192, 192, 192));
+    box-shadow: 2px 3px 6px rgb(29, 29, 29);
+    width: 100%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-links ul li {
+    list-style: none;  
+    transform: translate(0px, 0px);
+    transition: transform 100ms;
+}
+
+.navbar-links ul li:hover {
+    transform: translate(7px, 5px);
+}
+
+.navbar-links a {
+    padding: 10px;
+    text-decoration: none;
+    font-family: "Urbanist", arial, sans-serif;
+    font-weight: bold;
+    color: rgb(50, 2, 138);
+    font-size: 1.1em;
+    text-shadow: 2px 2px 5px rgb(61, 61, 61);
+    letter-spacing: 1px;
+    transition: text-shadow 200ms;
+}
+
+#bio, #tech-stacks {
+    color: rgb(50, 2, 138);
+    text-shadow: 2px 2px 5px rgb(61, 61, 61);
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px; 
+}
+
+#bio:hover, #tech-stacks:hover {
+    color: rgb(0, 173, 0);
+    text-shadow: none;
+}
+
+.navbar-links a:hover {
+    color: rgb(0, 173, 0);
+    text-shadow: none;
+}
+
+#profile-image {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    background-image:url("/src/assets/cnesmith_photo.jpg");
+    background-size: cover;
+    box-shadow: 2px 4px 10px rgb(24, 24, 24);
+    animation: load-border 5s 1 linear;
+}
+
+#profile-image-container {
+    position: absolute;
+    transform: translateY(0px);
+    transition: transform 200ms;
+}
+
+#profile-image-container:hover {
+    transform: translateY(0px);
+}
+
+.background-shape {
+    position: absolute;
+    z-index: 0;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    border: 10px double rgb(55, 0, 119);
+    background-image: linear-gradient(to bottom, rgb(34, 34, 34), rgb(25, 25, 25), rgb(2, 2, 2));
+    animation: cd 700ms infinite linear;
+}
+
+@keyframes cd {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.background-animation {
+    position: absolute;
+    box-shadow: 2px 4px 4px rgb(116, 116, 116);
+    background-color: rgb(206, 207, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    visibility: hidden;
+}
+
+.name-background-banner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.first-name-background {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8rem;
+    font-family: "Italiana", Arial, Helvetica, sans-serif;
+    color: rgb(31, 30, 32);
+    text-shadow: 6px 6px 3px rgb(68, 68, 68);
+    padding-left: 3%;
+    transform:translate3d(0, 200deg);
+    
+}
+
+.last-name-background {
+    font-size: 6rem;
+    display:flex;
+    justify-content: space-between;
+    font-family: "Italiana", Arial, Helvetica, sans-serif;
+    color: rgb(31, 30, 32);
+    text-shadow: 6px 6px 3px rgb(68, 68, 68);
+    padding-right: 3%;
+    background-image: linear-gradient();
+}
+
+#top-right-word {
+    font-size: 10rem;
+    color: rgb(206, 206, 206);
+    text-shadow: 12px 6px 3px rgb(228, 228, 228);
+    padding-right: 3%;
+    animation: fadeTopRight 10s infinite linear;
+}
+
+@keyframes fadeTopRight {
+    0% {
+        opacity: 0;
+        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 12px 6px 3px rgb(58, 58, 58);
+    }
+    100% {
+        opacity: 0;
+        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+    }
+}
+
+#bottom-left-word {
+    font-size: 11rem;
+    color: rgb(228, 224, 224);
+    text-shadow: 12px 3px 3px rgb(44, 44, 44);
+    padding-left: 3%;
+    animation: fadeBottomLeft 10s infinite linear;
+}
+
+@keyframes fadeBottomLeft {
+    0% {
+        opacity: 0;
+        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 12px 6px 3px rgb(58, 58, 58);
+    }
+    100% {
+        opacity: 0;
+        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    color: rgb(216, 216, 216);
+    font-family: "Urbanist", Arial, Helvetica, sans-serif;
+    padding-left: 12px;
+}
