@@ -8,7 +8,7 @@ const App = (props) => {
     useEffect(() => {
         navAnimationDiv()
         backgroundText()
-    }, [])
+    })
 
     const navAnimationDiv = () => {
         let navAnimationDiv;
