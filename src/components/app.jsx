@@ -12,7 +12,7 @@ const App = (props) => {
 
     const navAnimationDiv = () => {
         let navAnimationDiv;
-        for(let i = 0; i < 20; i++) {
+        for(let i = 0; i < 70; i++) {
             // Create element and add to class list
             navAnimationDiv = document.createElement('div');
             let navBar = document.getElementById("navBar");
@@ -23,7 +23,7 @@ const App = (props) => {
             // Style element
             let y = Math.floor(Math.random() * window.innerWidth);
             let x = Math.floor(Math.random() * window.innerWidth);
-            let height = Math.floor(Math.random() * (6 - 4 + 1) + 4);
+            let height = Math.floor(Math.random() * (40 - 20 + 1) + 20);
             let width = height
             navAnimationDiv.style.top = y + "px";
             navAnimationDiv.style.right = x + "px";
@@ -47,13 +47,13 @@ const App = (props) => {
                         width: ${navAnimationDiv.style.width};
                     }
                     25% {
-                        transform: translateY(25vh) ;
+                        transform: translateY(25vh) rotate(20deg);
                         opacity: .4;
                         height: ${height + 2}px;
                         width: ${width + 2}px;
                     }
                     50% {
-                        transform: translateY(50vh) ;
+                        transform: translateY(50vh) rotate(-180deg);
                         opacity: 0;
                         height: ${navAnimationDiv.style.height};
                         width: ${navAnimationDiv.style.width};
@@ -65,7 +65,7 @@ const App = (props) => {
                         width: ${width + 2}px;
                     }
                     100% {
-                        transform: translateY(110vh) ;
+                        transform: translateY(110vh) rotate(45deg);
                         opacity: 0;
                         height: ${navAnimationDiv.style.height};
                         width: ${navAnimationDiv.style.width};
@@ -77,10 +77,7 @@ const App = (props) => {
     };
 
     const backgroundText = () => {
-        let firstWordSkill = document.getElementById("software");
-        let secondWordSkill = document.getElementById("developer");
-        // firstWordSkill.innerText = "";
-        console.log(firstWordSkill.innerText);
+        let skillSetBottom = ["SOFTWARE", "FULL", ]
     }
 
     return (
@@ -89,10 +86,10 @@ const App = (props) => {
                 <div className="name-background-banner">
                     <div className="first-name-background">
                         <p>Charles</p>
-                        <p id="developer">Developer</p>
+                        <p id="developer">DEVELOPER</p>
                     </div>
                     <div className="last-name-background">
-                        <p id="software">Software</p>
+                        <p id="software">SOFTWARE</p>
                         <p>Nesmith II</p>
                     </div>
                 </div>
