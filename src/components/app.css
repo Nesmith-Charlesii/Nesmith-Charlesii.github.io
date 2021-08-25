@@ -182,10 +182,10 @@ hr {
     color: rgb(206, 206, 206);
     text-shadow: 12px 6px 3px rgb(228, 228, 228);
     padding-right: 3%;
-    animation: fadeTopRight 10s infinite linear;
+    animation: fadeTopLeft 9s infinite linear 2s;
 }
 
-@keyframes fadeTopRight {
+@keyframes fadeTopLeft {
     0% {
         opacity: 0;
         text-shadow: 12px 6px 3px rgb(228, 228, 228);
@@ -205,10 +205,10 @@ hr {
     color: rgb(228, 224, 224);
     text-shadow: 12px 3px 3px rgb(44, 44, 44);
     padding-left: 3%;
-    animation: fadeBottomLeft 10s infinite linear;
+    animation: fadeBottomRight 9s infinite linear 2s;
 }
 
-@keyframes fadeBottomLeft {
+@keyframes fadeBottomRight {
     0% {
         opacity: 0;
         text-shadow: 12px 6px 3px rgb(228, 228, 228);
