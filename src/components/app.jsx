@@ -12,7 +12,7 @@ const App = (props) => {
 
     const navAnimationDiv = () => {
         let navAnimationDiv;
-        for(let i = 0; i < 70; i++) {
+        for(let i = 0; i < 40; i++) {
             // Create element and add to class list
             navAnimationDiv = document.createElement('div');
             let navBar = document.getElementById("navBar");
@@ -23,20 +23,20 @@ const App = (props) => {
             // Style element
             let y = Math.floor(Math.random() * window.innerWidth);
             let x = Math.floor(Math.random() * window.innerWidth);
-            let height = Math.floor(Math.random() * (40 - 20 + 1) + 20);
+            let height = Math.floor(Math.random() * (150 - 80 + 1) + 80);
             let width = height
             navAnimationDiv.style.top = y + "px";
             navAnimationDiv.style.right = x + "px";
             navAnimationDiv.style.height = height + "px";
             navAnimationDiv.style.width = width;
 
-            let duration = Math.floor(Math.random() * 10);
+            let randomDuration = Math.floor(Math.random() * 10);
     
             let keyFrames = document.createElement("style");
             
             keyFrames.innerHTML = `
                 #${navAnimationDiv.id} {
-                    animation: box-banner 10s infinite linear ${duration}s;
+                    animation: box-banner 15s infinite linear ${randomDuration}s;
                 }
 
                 @keyframes box-banner {
@@ -47,25 +47,25 @@ const App = (props) => {
                         width: ${navAnimationDiv.style.width};
                     }
                     25% {
-                        transform: translateY(25vh) rotate(20deg);
-                        opacity: .4;
+                        transform: translateY(25vh) rotate(${randomDuration}deg);
+                        opacity: .2;
                         height: ${height + 2}px;
                         width: ${width + 2}px;
                     }
                     50% {
-                        transform: translateY(50vh) rotate(-180deg);
+                        transform: translateY(50vh) rotate(-${randomDuration}deg);
                         opacity: 0;
                         height: ${navAnimationDiv.style.height};
                         width: ${navAnimationDiv.style.width};
                     }
                     75% {
                         transform: translateY(75vh) ;
-                        opacity: .6;
+                        opacity: .4;
                         height: ${height + 2}px;
                         width: ${width + 2}px;
                     }
                     100% {
-                        transform: translateY(110vh) rotate(45deg);
+                        transform: translateY(110vh) rotate(${randomDuration}deg);
                         opacity: 0;
                         height: ${navAnimationDiv.style.height};
                         width: ${navAnimationDiv.style.width};
@@ -76,8 +76,18 @@ const App = (props) => {
         }
     };
 
+    let i = 0; 
     const backgroundText = () => {
-        let skillSetBottom = ["SOFTWARE", "FULL", ]
+        let bottomLeftWord = document.getElementById('software');
+        let skillWordsBottom = ["Software", "Full", "Web"];
+        if(i < skillWordsBottom.length) {
+            bottomLeftWord.innerText = skillWordsBottom[i];
+            i++;
+            setTimeout(backgroundText, 2000);
+        } else {
+            i = 0;
+            backgroundText();
+        }
     }
 
     return (
@@ -89,7 +99,7 @@ const App = (props) => {
                         <p id="developer">DEVELOPER</p>
                     </div>
                     <div className="last-name-background">
-                        <p id="software">SOFTWARE</p>
+                        <p id="software"></p>
                         <p>Nesmith II</p>
                     </div>
                 </div>
