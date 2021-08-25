@@ -155,7 +155,7 @@ hr {
     justify-content: space-around;
 }
 
-.first-name-background {
+.top-background {
     display: flex;
     justify-content: space-between;
     font-size: 8rem;
@@ -167,10 +167,10 @@ hr {
     
 }
 
-.last-name-background {
+.bottom-background {
     font-size: 6rem;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-family: "Italiana", Arial, Helvetica, sans-serif;
     color: rgb(31, 30, 32);
     text-shadow: 6px 6px 3px rgb(68, 68, 68);
@@ -178,7 +178,7 @@ hr {
     background-image: linear-gradient();
 }
 
-#top-right-word {
+#top-left-word {
     font-size: 10rem;
     color: rgb(206, 206, 206);
     text-shadow: 12px 6px 3px rgb(228, 228, 228);
@@ -201,7 +201,7 @@ hr {
     }
 }
 
-#bottom-left-word {
+#bottom-right-word {
     font-size: 11rem;
     color: rgb(228, 224, 224);
     text-shadow: 12px 3px 3px rgb(44, 44, 44);

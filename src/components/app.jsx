@@ -78,13 +78,13 @@ const App = (props) => {
 
     let i = 0; 
     const backgroundText = () => {
-        let topRightWord = document.getElementById('top-right-word');
-        let bottomLeftWord = document.getElementById('bottom-left-word');
-        let skillWordsBottom = ["Software", "Full", "Web"];
-        let skillWordsTop = ["Developer", "Stack", "Design"]
+        let topLeftWord = document.getElementById('top-left-word');
+        let bottomRightWord = document.getElementById('bottom-right-word');
+        let skillWordsTop = ["Software", "Full", "Web"];
+        let skillWordsBottom = ["Developer", "Stack", "Design"]
         if(i < skillWordsBottom.length) {
-            bottomLeftWord.innerText = skillWordsBottom[i];
-            topRightWord.innerText = skillWordsTop[i];  
+            bottomRightWord.innerText = skillWordsBottom[i];
+            topLeftWord.innerText = skillWordsTop[i];  
             i++;
             setTimeout(backgroundText, 10000);
         } else {
@@ -100,13 +100,11 @@ const App = (props) => {
                     
                 </div>
                 <div className="name-background-banner">
-                    <div className="first-name-background">
-                        <p></p>
-                        <p id="top-right-word"></p>
+                    <div className="top-background">
+                        <p id="top-left-word"></p>
                     </div>
-                    <div className="last-name-background">
-                        <p id="bottom-left-word"></p>
-                        <p></p>
+                    <div className="bottom-background">
+                        <p id="bottom-right-word"></p>
                     </div>
                 </div>
                 <div className="navbar-links">
