@@ -101,7 +101,6 @@
     background-image:url("/src/assets/cnesmith_photo.jpg");
     background-size: cover;
     box-shadow: 2px 4px 10px rgb(24, 24, 24);
-    animation: load-border 5s 1 linear;
 }
 
 #profile-image-container {
