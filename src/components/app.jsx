@@ -1,18 +1,15 @@
 import React from 'react';
-import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Switch, Route} from 'react-router-dom';
+import './app.css';
 import NavBar from './navBar/navBar.jsx';
+import Bio from './bio/bio.jsx';
 
 const App = (props) => {
 
     return (
         <div className="container-fluid">
-            <Switch>
-                <Route path="/"> 
-                    <NavBar/>
-                </Route>
-            </Switch>
+            <NavBar/>
+            <Bio/>
             <footer>
                 <p>Powered By: <b>CNII</b></p>
             </footer>

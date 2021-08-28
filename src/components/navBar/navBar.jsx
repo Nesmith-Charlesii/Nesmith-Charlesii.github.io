@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import './navbar.css'
 
 const NavBar = (props) => {
 
@@ -19,9 +19,9 @@ const NavBar = (props) => {
             // Insert into HTML
             navBar.insertBefore(navAnimationDiv, navBar.childNodes[0]);
             // Style element
-            let y = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
             let x = Math.floor(Math.random() * window.innerWidth);
-            let height = Math.floor(Math.random() * (150 - 80 + 1) + 80);
+            let height = Math.floor(Math.random() * (180 - 80 + 1) + 80);
             let width = height
             navAnimationDiv.style.top = y + "px";
             navAnimationDiv.style.right = x + "px";
@@ -63,7 +63,7 @@ const NavBar = (props) => {
                         width: ${width + 2}px;
                     }
                     100% {
-                        transform: translateY(110vh) rotate(${randomDuration}deg);
+                        transform: translateY(100vh) rotate(${randomDuration}deg);
                         opacity: 0;
                         height: ${navAnimationDiv.style.height};
                         width: ${navAnimationDiv.style.width};
@@ -106,17 +106,15 @@ const NavBar = (props) => {
                 </div>
                 <div className="navbar-links">
                     <ul>
-                        <li><Link to="bio" id="bio">Bio</Link></li>
-                        <li><Link to="tech" id="tech-stacks">Tech/Stacks</Link></li>
+                        <li><a href="#bio">Bio</a></li>
+                        <li><a href="#tech">Tech/Stacks</a></li>
                         <li></li>
-                        <li id="profile-image-container">
-                            <hr/>
-                                <div id="profile-image"></div>
-                            <hr/>
-                        </li>
-                        <li><Link to="projects">Projects</Link></li>
-                        <li><Link to="contact">Contact</Link></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
+                </div>
+                <div id="profile-image-container">
+                    <div id="profile-image"></div>
                 </div>
             </nav>
     )
