@@ -2,8 +2,11 @@ html, body {
     scroll-behavior: smooth;
 }
 
-.navbar-links ul {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
+.container-fluid {
+    padding: 0px ;
+    height: 100%;
+}
+
+footer {
+    position: fixed;
 }
