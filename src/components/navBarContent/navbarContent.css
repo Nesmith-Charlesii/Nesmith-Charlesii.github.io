@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Permanent+Marker&family=Urbanist:wght@100&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
 
 .navBarContent {
     position: relative;
@@ -11,12 +9,13 @@
     justify-content: center;
     align-items: center;
     overflow:hidden;
-    background-image: linear-gradient(to bottom,rgb(192, 191, 191), rgb(220, 220, 220));
+    /* background-image: linear-gradient(to bottom right, rgb(231, 128, 10), orange, gold); */
+    background-image: linear-gradient(to bottom right, rgb(160, 86, 3), rgb(74, 64, 216));
 }
 
-/* .navBarContent-links {
+.navBarContent-links {
     position: sticky;
-    z-index: 1;
+    z-index: 0;
     top:0px;
     width: 0%;
     display: flex;
@@ -78,15 +77,30 @@
 .navBarContent-links a:hover, .navBarContent-links a:not([href]):hover {
     color: rgb(0, 173, 0);
     text-shadow: none;
-} */
+}
 
 #profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 240px;
     width: 240px;
     border-radius: 50%;
-    background-image:url("/src/assets/cnesmith_photo.jpg");
-    background-size: cover;
-    box-shadow: 2px 4px 10px rgb(24, 24, 24);
+    border: 12px double rgb(49, 31, 129);
+    color: rgb(253, 253, 253);
+    /* background-image: linear-gradient(to bottom right, rgb(230,140,20), rgb(55, 0, 119)); */
+    background-image: linear-gradient(to bottom right, rgb(160, 86, 3), rgb(74, 64, 216));
+    box-shadow: 2px 4px 10px rgb(14, 14, 14);
+    animation: rotate-inner 2s infinite linear reverse;
+}
+
+@keyframes rotate-inner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #profile-image-container {
@@ -94,10 +108,26 @@
     z-index: 1;
     transform: translateY(0px);
     transition: transform 200ms;
+    /* display: none; */
 }
 
 #profile-image-container:hover {
     transform: translateY(0px);
+}
+
+.myName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    transform: translate(0, 10%);
+    z-index: 1;
+    font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity:.7;
 }
 
 .background-shape {
@@ -108,7 +138,8 @@
     border-radius: 50%;
     border: 10px double rgb(55, 0, 119);
     background-image: linear-gradient(to bottom, rgb(34, 34, 34), rgb(25, 25, 25), rgb(2, 2, 2));
-    animation: cd 700ms infinite linear;
+    animation: cd 2s infinite linear;
+    /* display: none; */
 }
 
 @keyframes cd {
@@ -122,8 +153,8 @@
 
 .background-animation {
     position: absolute;
-    box-shadow: 2px 4px 4px rgb(116, 116, 116);
-    background-color: rgb(206, 207, 206);
+    box-shadow: 2px 4px 4px rgb(112, 112, 112);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,70 +171,59 @@
 
 .top-background {
     display: flex;
-    justify-content: space-between;
-    font-size: 8rem;
-    font-family: "Italiana", Arial, Helvetica, sans-serif;
-    color: rgb(31, 30, 32);
-    text-shadow: 6px 6px 3px rgb(68, 68, 68);
     padding-left: 3%;
     transform:translate3d(0, 200deg);
     
 }
 
 .bottom-background {
-    font-size: 6rem;
     display:flex;
     justify-content: flex-end;
-    font-family: "Italiana", Arial, Helvetica, sans-serif;
-    color: rgb(31, 30, 32);
-    text-shadow: 6px 6px 3px rgb(68, 68, 68);
     padding-right: 3%;
-    background-image: linear-gradient();
 }
 
 #top-left-word {
+    /* display:none; */
+    position: relative;
     font-size: 11rem;
-    color: rgb(206, 206, 206);
-    text-shadow: 12px 6px 3px rgb(228, 228, 228);
+    font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+    color: rgb(27, 7, 36);
+    text-shadow: 4px 8px 3px rgb(24, 24, 24);
     padding-right: 3%;
-    animation: fadeTopLeft 10s infinite linear;
+    /* animation: fadeTopLeft 12s infinite linear; */
 }
 
 @keyframes fadeTopLeft {
     0% {
-        opacity: 0;
-        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+        color: rgb(27, 7, 36);
     }
     50% {
-        opacity: 1;
-        text-shadow: 12px 6px 3px rgb(58, 58, 58);
+        color: rgb(61, 4, 21);
     }
     100% {
-        opacity: 0;
-        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+        color: rgb(27, 7, 36);
     }
 }
 
 #bottom-right-word {
+    /* display:none; */
+    font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
     font-size: 11rem;
-    color: rgb(228, 224, 224);
-    text-shadow: 12px 3px 3px rgb(44, 44, 44);
+    color: rgb(27, 7, 36);
+    text-shadow: 4px 8px 3px rgb(24, 24, 24);
     padding-left: 3%;
-    animation: fadeBottomRight 10s infinite linear;
+    /* animation: fadeBottomRight 12s infinite linear; */
 }
 
 @keyframes fadeBottomRight {
     0% {
-        opacity: 0;
-        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+        color: rgb(27, 7, 36);
     }
     50% {
-        opacity: 1;
-        text-shadow: 12px 6px 3px rgb(58, 58, 58);
+        color: rgb(61, 4, 21);
     }
     100% {
-        opacity: 0;
-        text-shadow: 12px 6px 3px rgb(228, 228, 228);
+        color: rgb(27, 7, 36);
     }
 }
 
