@@ -1,3 +1,69 @@
-.bio {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Permanent+Marker&family=Urbanist:wght@100&display=swap');
+
+#bio {
     height: 100vh;
+}
+
+.about-header {
+    display: flex;
+    justify-content: space-around;
+    font: 8rem helvetica, sans-serif;
+    margin-bottom: 5%;
+    color: rgb(50, 2, 138);
+}
+
+#about {
+    font: 8rem helvetica, sans-serif;
+    margin-bottom: 5%;
+    color: rgb(50, 2, 138);
+}
+
+#me {
+    font: 8rem helvetica, sans-serif;
+    margin-bottom: 5%;
+    color: rgb(0, 0, 0);
+}
+
+.about-content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* background-image: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(50, 2, 138) 50%); */
+}
+
+.about-profile-container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.about-profile-photo {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-image: url("/src/assets/cnesmith_photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.about-text-container {
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.about-text {
+    font: 2rem "urbanist", arial, helvetica;
+    width: 35vw;
+    border-radius: 7px;
+    padding: 20px;
+    color: white;
+    border: 2px double rgb(50, 2, 138);
 }

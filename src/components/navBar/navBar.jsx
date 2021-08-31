@@ -8,7 +8,7 @@ const NavBar = () => {
             <ul>
                 <li><Link to="bio" smooth={true}>Bio</Link></li>
                 <li><Link to="tech" smooth={true}>Tech/Stacks</Link></li>
-                <li></li>
+                {/* <li></li> */}
                 <li><Link to="projects" smooth={true}>Projects</Link></li>
                 <li><Link to="contact" smooth={true}>Contact</Link></li>
             </ul>

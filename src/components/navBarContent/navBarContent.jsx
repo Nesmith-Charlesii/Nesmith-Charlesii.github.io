@@ -6,7 +6,6 @@ const NavBarContent = (props) => {
 
     useEffect(() => {
         navAnimationDiv()
-        // backgroundText()
     })
 
     const navAnimationDiv = () => {
@@ -75,36 +74,18 @@ const NavBarContent = (props) => {
         }
     };
 
-    // let i = 0; 
-    // const backgroundText = () => {
-    //     let topLeftWord = document.getElementById('top-left-word');
-    //     let bottomRightWord = document.getElementById('bottom-right-word');
-    //     let skillWordsTop = ["Full-Stack", "Web"];
-    //     let skillWordsBottom = ["Developer", "Design"]
-    //     if(i < skillWordsBottom.length) {
-    //         bottomRightWord.innerText = skillWordsBottom[i];
-    //         topLeftWord.innerText = skillWordsTop[i];  
-    //         i++;
-    //         setTimeout(backgroundText, 10000);
-    //     } else {
-    //         i = 0;
-    //         backgroundText();
-    //     }
-    // }
-
     return (
         <section id="navbar">
-        {/* <NavBar/> */}
             <nav className="navBarContent d-flex justify-content-center" id="navBarContent">
                 <div className="background-shape">
                     
                 </div>
                 <div className="name-background-banner">
                     <div className="top-background">
-                        <p id="top-left-word">Full-Stack</p>
+                        <p id="top-left-word">FULL-STACK</p>
                     </div>
                     <div className="bottom-background">
-                        <p id="bottom-right-word">Developer</p>
+                        <p id="bottom-right-word">DEVELOPER</p>
                     </div>
                 </div>
                 <div id="profile-image-container">
